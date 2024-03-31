@@ -1,0 +1,59 @@
+.bai1{
+    width: 700px;
+    height: 500px;
+    background: rgb(2,0,36);
+    background-image: url(img.maunen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bai1-container{
+    width: 500px;
+    height: fit-content;
+    background: rgb(240,248,255);
+    background:       linear-gradient(to right, rgb(41, 126, 145), rgb(175, 23, 152));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    border-radius: 10px;
+}
+.bai1-form i {
+    position: absolute;
+}
+.bai1-form >i{
+    padding: 17px;
+    min-width: 40px;
+}
+.bai1-input{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.bai1-2button{
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+}
+.bai1-button{
+margin: 10px;
+}
+
+.bai3-form{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.danh-gia{
+    margin: 20p;
+}
+.line{
+    width: 25%;
+    height: 2px;
+    background-color:aquamarine ;
+}
+.comment-section{
+    margin: 10px;
+}

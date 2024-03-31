@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+</head>
+<body>
+    <!--Bài 1 -->
+<div class="name">Bài 1</div>
+<div class="bai1">
+    <div class="bai1-container">
+        <h3>Login</h3>
+        <p>Login here using your username and password</p>
+        <form action="" class="bai1-form">
+            <i class="ti-user icon"></i>
+            <input type="text" id="bai1-username" class="bai1-input"><br>
+            <i class="ti-key icon"></i>
+            <input type="password" id="bai1-password"  class="bai1-input">
+        </form>
+        <div class="bai1-button">
+            <span class="bai1-2button">
+                Forgot Password
+            </span>
+            <span class="bai1-2button">
+                Sign Up <i class="ti-rocket icon"></i>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="bai2">
+    <div class="name">Bài 2</div>
+    <div class="clock">
+        <!-- Hiển thị giờ, phút, giây và AM/PM -->
+    <div id="clock"></div>
+
+    <script>
+        // Hàm để định dạng giờ theo định dạng 12 giờ AM/PM
+        function formatAMPM(date) {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12; // Giờ 0 sẽ là 12 giờ
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            var strTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            return strTime;
+        }
+
+        // Lấy thời gian hiện tại
+        var currentTime = new Date();
+
+        // Hiển thị giờ, phút, giây và AM/PM
+        document.getElementById('clock').innerHTML = formatAMPM(currentTime);
+
+        // Cập nhật thời gian mỗi giây
+        setInterval(function() {
+            currentTime = new Date();
+            document.getElementById('clock').innerHTML = formatAMPM(currentTime);
+        }, 1000);
+    </script>
+    </div>
+</div>
+
+<!--Bài 3-->
+<div class="bai3">
+    <div class="name">Bài 3</div>
+    <h1>Bài 3 </h1>
+    <div class="bai3-wrap">
+        <div class="bai3-form">
+            <label for="name">Tên của bạn</Label>
+            <input type="text" id="name">
+            <label for="noidung">Nội dung góp ý</label>
+            <input name="noidung" type="text" id="noidung"></input>
+            <input type="button" value="Gửi nội dung" onclick="submit()">
+        </div>
+
+        <h1 class="danh-gia">Đánh giá</h1>
+        <div class="line"></div>
+        <div id="comment-section">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
